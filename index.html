@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saim Ejaz | ACCA Finalist - Accounting & Finance Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --navy: #0a2540;
+            --royal-blue: #1e40af;
+            --bright-blue: #3b82f6;
+            --gold: #d4af37;
+            --gold-light: #f4d03f;
+            --emerald: #059669;
+            --text-dark: #0f172a;
+            --text-medium: #475569;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a2540 0%, #1e3a8a 50%, #1e40af 100%);
+            color: var(--white);
+            padding: 120px 20px 140px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/></pattern></defs><rect width="60" height="60" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: center;
+            animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .availability-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(5, 150, 105, 0.15);
+            border: 2px solid var(--emerald);
+            color: #d1fae5;
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
+        .availability-badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: 4.5em;
+            font-weight: 900;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            text-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.75em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            opacity: 0.95;
+            line-height: 1.4;
+        }
+
+        .hero-tagline {
+            font-size: 1.2em;
+            opacity: 0.85;
+            margin-bottom: 15px;
+            font-style: italic;
+            color: var(--gold-light);
+            font-weight: 500;
+        }
+
+        .hero-location {
+            font-size: 1.05em;
+            opacity: 0.8;
+            margin-bottom: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .cta-container {
+            margin-top: 40px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 18px 42px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+            color: var(--navy);
+            box-shadow: 0 6px 24px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 35px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.4);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.6);
+            transform: translateY(-3px);
+        }
+
+        .quick-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            font-size: 0.95em;
+            opacity: 0.9;
+        }
+
+        .quick-links a {
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .quick-links a:hover {
+            color: var(--gold-light);
+            transform: translateY(-2px);
+        }
+
+        /* Credentials Grid */
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-top: 80px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .credential-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            padding: 35px 25px;
+            border-radius: 20px;
+            text-align: center;
+            border: 2px solid rgba(255,255,255,0.15);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .credential-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+            transition: left 0.6s;
+        }
+
+        .credential-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            background: rgba(255,255,255,0.12);
+            border-color: var(--gold);
+            box-shadow: 0 15px 45px rgba(212, 175, 55, 0.3);
+        }
+
+        .credential-card:hover::before {
+            left: 100%;
+        }
+
+        .credential-icon {
+            font-size: 3.2em;
+            margin-bottom: 15px;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
+        .credential-value {
+            font-size: 2.4em;
+            font-weight: 900;
+            color: var(--gold-light);
+            display: block;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .credential-label {
+            font-size: 0.95em;
+            opacity: 0.95;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        /* Sections */
+        section {
+            padding: 100px 20px;
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .section-light {
+            background: linear-gradient(180deg, var(--bg-light) 0%, #e2e8f0 100%);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .section-title {
+            font-size: 3em;
+            font-weight: 900;
+            color: var(--navy);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--gold), var(--bright-blue));
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2em;
+            color: var(--text-medium);
+            max-width: 750px;
+            margin: 30px auto 0;
+            line-height: 1.7;
+        }
+
+        /* Value Proposition */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 45px 40px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--gold), var(--bright-blue));
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-12px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--bright-blue);
+        }
+
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-icon {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            display: block;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        .value-card h3 {
+            color: var(--navy);
+            margin-bottom: 18px;
+            font-size: 1.6em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .value-card p {
+            color: var(--text-medium);
+            line-height: 1.8;
+            font-size: 1.05em;
+        }
+
+        /* Featured Publication */
+        .featured-publication {
+            background: linear-gradient(135deg, #0a2540 0%, #1e3a8a 100%);
+            color: var(--white);
+            padding: 80px 60px;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            margin-bottom: 60px;
+        }
+
+        .featured-publication::before {
+            content: '📚';
+            position: absolute;
+            font-size: 25em;
+            opacity: 0.03;
+            right: -100px;
+            top: -100px;
+            transform: rotate(-15deg);
+            pointer-events: none;
+        }
+
+        .publication-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+        }
+
+        .publication-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--navy);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9em;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .featured-publication h3 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+            line-height: 1.2;
+        }
+
+        .featured-publication p {
+            font-size: 1.25em;
+            line-height: 1.9;
+            margin-bottom: 25px;
+            opacity: 0.95;
+        }
+
+        .publication-highlights {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pub-highlight {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .pub-highlight-icon {
+            font-size: 2.5em;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .pub-highlight-title {
+            font-size: 1.1em;
+            font-weight: 700;
+            color: var(--gold-light);
+            margin-bottom: 8px;
+        }
+
+        .pub-highlight-desc {
+            font-size: 0.95em;
+            opacity: 0.85;
+        }
+
+        /* Expertise Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .expertise-card {
+            background: var(--white);
+            padding: 40px 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-top: 5px solid var(--bright-blue);
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+            border-top-color: var(--gold);
+        }
+
+        .expertise-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 25px;
+        }
+
+        .expertise-icon {
+            font-size: 3em;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .expertise-card h3 {
+            color: var(--navy);
+            font-size: 1.5em;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .skill-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            padding: 14px 0;
+            color: var(--text-medium);
+            border-bottom: 1px solid #e2e8f0;
+            font-size: 1.05em;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+
+        .skill-list li::before {
+            content: '✓';
+            color: var(--emerald);
+            font-weight: 900;
+            font-size: 1.3em;
+            flex-shrink: 0;
+        }
+
+        .skill-list li:hover {
+            color: var(--navy);
+            padding-left: 8px;
+        }
+
+        /* Impact Projects */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
+        }
+
+        .impact-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+        }
+
+        .impact-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--bright-blue);
+        }
+
+        .impact-header {
+            background: linear-gradient(135deg, var(--bright-blue), #2563eb);
+            padding: 40px 30px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .impact-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .impact-icon {
+            font-size: 3.5em;
+            margin-bottom: 18px;
+            display: block;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+
+        .impact-card h3 {
+            font-size: 1.7em;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .impact-company {
+            opacity: 0.9;
+            font-size: 1.05em;
+            font-weight: 600;
+        }
+
+        .impact-body {
+            padding: 35px 30px;
+        }
+
+        .impact-metric {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            padding: 18px 22px;
+            border-radius: 14px;
+            margin-bottom: 22px;
+            border-left: 5px solid var(--gold);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+        }
+
+        .impact-metric-value {
+            font-size: 2.2em;
+            font-weight: 900;
+            color: var(--navy);
+            display: block;
+            letter-spacing: -1px;
+        }
+
+        .impact-metric-label {
+            font-size: 0.9em;
+            color: #78350f;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .impact-description {
+            color: var(--text-medium);
+            line-height: 1.8;
+            margin-bottom: 22px;
+            font-size: 1.05em;
+        }
+
+        .impact-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .impact-tag {
+            background: var(--bg-light);
+            padding: 8px 18px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: var(--bright-blue);
+            font-weight: 700;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+
+        .impact-tag:hover {
+            background: var(--bright-blue);
+            color: var(--white);
+            border-color: var(--bright-blue);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0a2540 0%, #1e3a8a 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 100px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            font-weight: 900;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 1.35em;
+            opacity: 0.9;
+            max-width: 850px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            max-width: 1000px;
+            margin: 60px auto 0;
+        }
+
+        .contact-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(20px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid rgba(255,255,255,0.15);
+            text-align: center;
+        }
+
+        .contact-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
+        }
+
+        .contact-icon {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            display: block;
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+        }
+
+        .contact-title {
+            font-size: 1.3em;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .contact-detail {
+            font-size: 1em;
+            opacity: 0.85;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--navy);
+            color: var(--white);
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 1.05em;
+            margin-bottom: 10px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--gold-light);
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .credentials {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .value-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .impact-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-subtitle {
+                font-size: 1.3em;
+            }
+
+            .section-title {
+                font-size: 2.2em;
+            }
+
+            .credentials {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .value-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .publication-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-publication {
+                padding: 50px 30px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-location {
+                flex-direction: column;
+            }
+
+            .quick-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .hero {
+                background: var(--navy) !important;
+            }
+
+            .btn, .cta-section {
+                display: none;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="availability-badge">Available Immediately</span>
+                <h1>Saim Ejaz</h1>
+                <p class="hero-subtitle">ACCA Finalist | MSc Accounting Student | Published Author</p>
+                <p class="hero-tagline">"Transforming Complex Financial Data into Strategic Business Intelligence"</p>
+                <p class="hero-location">
+                    <span>📍 Brighton & Hove, United Kingdom</span>
+                    <span>•</span>
+                    <span>🎓 University of Brighton</span>
+                </p>
+                
+                <div class="cta-container">
+                    <div class="cta-buttons">
+                        <a href="mailto:saimejaz.acca@gmail.com" class="btn btn-primary">
+                            <span>📧</span>
+                            <span>Email Me</span>
+                        </a>
+                        <a href="tel:+447365421804" class="btn btn-secondary">
+                            <span>📞</span>
+                            <span>+44 7365 421804</span>
+                        </a>
+                        <a href="https://linkedin.com/in/saimejaz" target="_blank" class="btn btn-secondary">
+                            <span>💼</span>
+                            <span>LinkedIn Profile</span>
+                        </a>
+                    </div>
+                    
+                    <div class="quick-links">
+                        <a href="#value">
+                            <span>⚡</span>
+                            <span>Why Hire Me</span>
+                        </a>
+                        <a href="#expertise">
+                            <span>💼</span>
+                            <span>Expertise</span>
+                        </a>
+                        <a href="#projects">
+                            <span>📊</span>
+                            <span>Projects</span>
+                        </a>
+                        <a href="#contact">
+                            <span>✉️</span>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="credentials">
+                    <div class="credential-card">
+                        <span class="credential-icon">🎓</span>
+                        <span class="credential-value">ACCA</span>
+                        <span class="credential-label">Finalist<br>Skills Complete</span>
+                    </div>
+                    <div class="credential-card">
+                        <span class="credential-icon">📚</span>
+                        <span class="credential-value">Author</span>
+                        <span class="credential-label">Published Book<br>Accounting Guide</span>
+                    </div>
+                    <div class="credential-card">
+                        <span class="credential-icon">💰</span>
+                        <span class="credential-value">£48M+</span>
+                        <span class="credential-label">Financial Data<br>Analyzed</span>
+                    </div>
+                    <div class="credential-card">
+                        <span class="credential-icon">🔍</span>
+                        <span class="credential-value">£3M+</span>
+                        <span class="credential-label">Fraud Exposure<br>Identified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Value Proposition Section -->
+    <section id="value" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Leading Firms Choose Me</h2>
+                <p class="section-subtitle">I deliver a rare combination of ACCA-qualified accounting expertise, advanced data analytics capabilities, and proven business impact—ready to contribute from day one.</p>
+            </div>
+            
+            <div class="value-grid">
+                <div class="value-card">
+                    <span class="value-icon">🎯</span>
+                    <h3>ACCA-Qualified Excellence</h3>
+                    <p>Skills Level complete with BSc (Hons) Applied Accounting from Oxford Brookes University. Currently pursuing MSc Accounting (ACCA) at University of Brighton. Deep expertise in IFRS, financial reporting, auditing principles, and UK taxation.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">📊</span>
+                    <h3>Advanced Analytics Capability</h3>
+                    <p>Certified Data Analyst with hands-on proficiency in Power BI, SQL, Python, and advanced Excel. I transform raw financial data into compelling dashboards and actionable insights that drive strategic decisions.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">💎</span>
+                    <h3>Demonstrated Business Impact</h3>
+                    <p>Delivered measurable results: analyzed £48M+ in retail sales data, identified £3M+ fraud exposure, and optimized operational processes across healthcare and e-commerce sectors through data-driven insights.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">✍️</span>
+                    <h3>Communication Excellence</h3>
+                    <p>Published author with exceptional ability to distill complex financial concepts into clear, actionable communications. Proven track record in stakeholder engagement and cross-functional collaboration.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🤖</span>
+                    <h3>Future-Ready Technology Skills</h3>
+                    <p>SAP-certified in Generative AI with hands-on experience building automation solutions (n8n workflows, AI responders). I leverage emerging technologies to enhance accounting efficiency and accuracy.</p>
+                </div>
+
+                <div class="value-card">
+                    <span class="value-icon">🔍</span>
+                    <h3>Audit & Risk Expertise</h3>
+                    <p>EY-trained in audit fundamentals including risk assessment, control testing, and material misstatement analysis. Meticulous attention to detail ensures compliance and accuracy in all financial operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Publication -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Publication</h2>
+                <p class="section-subtitle">Demonstrating thought leadership and ability to communicate complex accounting concepts effectively</p>
+            </div>
+
+            <div class="featured-publication">
+                <div class="publication-content">
+                    <span class="publication-badge">📚 Published Author</span>
+                    <h3>Accounting: The Engineering of Business</h3>
+                    <p>Authored and self-published a comprehensive accounting guide that demystifies complex financial principles for students, entrepreneurs, and business professionals. The publication bridges the gap between academic theory and practical application.</p>
+                    <p><strong>This demonstrates:</strong> My deep understanding of accounting fundamentals, ability to communicate technical concepts to diverse audiences, and commitment to knowledge sharing—essential qualities for client advisory, team leadership, and stakeholder engagement roles.</p>
+                    
+                    <div class="publication-highlights">
+                        <div class="pub-highlight">
+                            <span class="pub-highlight-icon">🌟</span>
+                            <div class="pub-highlight-title">Industry Recognition</div>
+                            <div class="pub-highlight-desc">Positive feedback from academic and professional circles</div>
+                        </div>
+                        <div class="pub-highlight">
+                            <span class="pub-highlight-icon">💡</span>
+                            <div class="pub-highlight-title">Practical Focus</div>
+                            <div class="pub-highlight-desc">Simplifies complex concepts with real-world applications</div>
+                        </div>
+                        <div class="pub-highlight">
+                            <span class="pub-highlight-icon">🎓</span>
+                            <div class="pub-highlight-title">Educational Impact</div>
+                            <div class="pub-highlight-desc">Helps students and professionals master accounting</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Expertise Section -->
+    <section id="expertise" class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Expertise</h2>
+                <p class="section-subtitle">A comprehensive skill set spanning traditional accounting excellence and modern data analytics—ready to add immediate value to Big 4 and multinational finance teams.</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">💼</span>
+                        <h3>Financial Accounting & Reporting</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Financial Statement Preparation (P&L, Balance Sheet, Cash Flow)</li>
+                        <li>IFRS Standards Application & Compliance</li>
+                        <li>Double-Entry Bookkeeping & General Ledger Management</li>
+                        <li>Account Reconciliations (Bank, Intercompany, AP/AR)</li>
+                        <li>Journal Entries & Trial Balance Preparation</li>
+                        <li>Month-End & Year-End Close Procedures</li>
+                        <li>Financial Analysis & Ratio Interpretation</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">📈</span>
+                        <h3>Management Accounting & Analysis</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Budgeting, Forecasting & Scenario Planning</li>
+                        <li>Variance Analysis (Actual vs. Budget/Forecast)</li>
+                        <li>Cost Accounting & Profitability Analysis</li>
+                        <li>KPI Development & Performance Tracking</li>
+                        <li>Management Reporting & Executive Dashboards</li>
+                        <li>Business Case Development & ROI Analysis</li>
+                        <li>Decision Support & Strategic Financial Planning</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">🔍</span>
+                        <h3>Audit, Assurance & Internal Controls</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Risk Assessment & Materiality Determination</li>
+                        <li>Internal Controls Evaluation & Testing</li>
+                        <li>Material Misstatement Analysis</li>
+                        <li>Transaction Flow Mapping & Process Documentation</li>
+                        <li>Control Testing & Substantive Procedures</li>
+                        <li>Audit Planning & Execution (EY Methodology)</li>
+                        <li>SOX Compliance & Control Frameworks</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">💷</span>
+                        <h3>UK Taxation & Compliance</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>UK Income Tax Fundamentals</li>
+                        <li>Corporation Tax Basics</li>
+                        <li>VAT Principles & Application</li>
+                        <li>Tax Compliance & Filing Requirements</li>
+                        <li>Tax Planning Considerations</li>
+                        <li>HMRC Regulations & Reporting Standards</li>
+                        <li>Tax Implications in Business Decisions</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">📊</span>
+                        <h3>Data Analytics & Business Intelligence</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Power BI (DAX, Measures, Interactive Dashboards)</li>
+                        <li>SQL (Data Querying, Joins, Aggregations)</li>
+                        <li>Advanced Excel (Pivot Tables, VLOOKUP, Macros, Charts)</li>
+                        <li>Tableau & Data Visualization Best Practices</li>
+                        <li>Python Basics (Pandas, Data Manipulation)</li>
+                        <li>Financial Data Modeling & Scenario Analysis</li>
+                        <li>Statistical Analysis & Trend Identification</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">🤖</span>
+                        <h3>Technology & Process Automation</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Generative AI for Finance (SAP Certified)</li>
+                        <li>Process Automation (n8n Workflows)</li>
+                        <li>Accounting Software Proficiency</li>
+                        <li>ERP System Experience</li>
+                        <li>AI-Driven Business Solutions</li>
+                        <li>Workflow Optimization & Efficiency Improvement</li>
+                        <li>Digital Transformation in Accounting</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Projects Section -->
+    <section id="projects" class="section-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proven Business Impact</h2>
+                <p class="section-subtitle">Real projects delivering measurable results—demonstrating my ability to apply technical skills to solve complex business challenges.</p>
+            </div>
+            
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">📊</span>
+                        <h3>Retail Sales Analytics Dashboard</h3>
+                        <p class="impact-company">Atom Camp - Data Analyst Trainee</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">£45M+</span>
+                            <span class="impact-metric-label">Weekly Sales Tracked</span>
+                        </div>
+                        <p class="impact-description">Built comprehensive Power BI dashboard tracking multi-million pound retail sales data across product categories. Identified underperforming departments and revenue optimization opportunities through advanced DAX calculations and trend analysis.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">Power BI</span>
+                            <span class="impact-tag">DAX</span>
+                            <span class="impact-tag">Sales Analysis</span>
+                            <span class="impact-tag">KPIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">🔍</span>
+                        <h3>Fraud Risk Analysis & Detection</h3>
+                        <p class="impact-company">Atom Camp - Capstone Project</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">£3M+</span>
+                            <span class="impact-metric-label">Fraud Exposure Identified</span>
+                        </div>
+                        <p class="impact-description">Conducted comprehensive fraud exposure analysis across multiple risk tiers using Power BI geo drilldowns and advanced analytics. Developed risk stratification model and recommended targeted mitigation strategies to reduce financial exposure.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">Risk Analytics</span>
+                            <span class="impact-tag">Fraud Detection</span>
+                            <span class="impact-tag">Geo Analysis</span>
+                            <span class="impact-tag">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">✅</span>
+                        <h3>EY Audit Simulation</h3>
+                        <p class="impact-company">Ernst & Young</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">Big 4</span>
+                            <span class="impact-metric-label">Audit Training</span>
+                        </div>
+                        <p class="impact-description">Completed comprehensive audit simulation replicating EY's professional workflows. Performed risk assessments, material misstatement analysis, control testing, and transaction flow mapping—demonstrating readiness for audit roles.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">Audit</span>
+                            <span class="impact-tag">Risk Assessment</span>
+                            <span class="impact-tag">Controls</span>
+                            <span class="impact-tag">EY Methods</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">🏥</span>
+                        <h3>Healthcare Operations Analytics</h3>
+                        <p class="impact-company">Atom Camp</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">9,900+</span>
+                            <span class="impact-metric-label">Records Analyzed</span>
+                        </div>
+                        <p class="impact-description">Processed and analyzed large-scale healthcare appointment data using SQL to identify factors contributing to no-show rates. Delivered actionable insights to reduce operational inefficiencies and improve resource allocation.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">SQL</span>
+                            <span class="impact-tag">Data Cleaning</span>
+                            <span class="impact-tag">Process Improvement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">🛒</span>
+                        <h3>E-Commerce Profitability Analysis</h3>
+                        <p class="impact-company">Atom Camp</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">5,600+</span>
+                            <span class="impact-metric-label">Orders Analyzed</span>
+                        </div>
+                        <p class="impact-description">Analyzed extensive e-commerce order data to identify profitability drivers, high-value customer segments, and product performance trends. Provided strategic recommendations to optimize revenue streams and margin improvement.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">Profitability</span>
+                            <span class="impact-tag">Segmentation</span>
+                            <span class="impact-tag">Revenue Analysis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-header">
+                        <span class="impact-icon">🤖</span>
+                        <h3>AI Business Automation Solutions</h3>
+                        <p class="impact-company">Personal Innovation Projects</p>
+                    </div>
+                    <div class="impact-body">
+                        <div class="impact-metric">
+                            <span class="impact-metric-value">2</span>
+                            <span class="impact-metric-label">AI Systems Built</span>
+                        </div>
+                        <p class="impact-description">Developed AI-driven business solutions including an Inventory Management System using n8n automation and an intelligent Email Responder. Improved operational efficiency and reduced manual processing time through smart automation.</p>
+                        <div class="impact-tags">
+                            <span class="impact-tag">AI/ML</span>
+                            <span class="impact-tag">Automation</span>
+                            <span class="impact-tag">n8n</span>
+                            <span class="impact-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="section-white">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Professional Qualifications</h2>
+                <p class="section-subtitle">Rigorous academic foundation combined with industry-recognized certifications</p>
+            </div>
+
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">🎓</span>
+                        <h3>Academic Qualifications</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><strong>MSc Accounting (ACCA)</strong> - University of Brighton (2025-2026, In Progress)</li>
+                        <li><strong>BSc (Hons) Applied Accounting</strong> - Oxford Brookes University (2025, Graduated)</li>
+                        <li><strong>ACCA Finalist</strong> - Skills Level Complete (2025)</li>
+                    </ul>
+                </div>
+
+                <div class="expertise-card">
+                    <div class="expertise-header">
+                        <span class="expertise-icon">📜</span>
+                        <h3>Professional Certifications</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><strong>Certified Data Analyst</strong> - Atom Camp (Power BI, SQL, Analytics)</li>
+                        <li><strong>Data Fundamentals Certificate</strong> - IBM (Data Cleaning, Visualization)</li>
+                        <li><strong>Generative AI Certificate</strong> - SAP (AI for Business Automation)</li>
+                        <li><strong>EY Audit Job Simulation</strong> - Ernst & Young (Audit Fundamentals)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's Discuss Your Next Hire</h2>
+                <p>I'm actively seeking opportunities with leading accounting firms, Big 4 organizations, and multinational corporations across the UK. With my ACCA qualifications, data analytics expertise, and proven track record of delivering business impact, I'm ready to contribute from day one.</p>
+                <p><strong>Available for immediate start | Open to relocation | Eligible to work in the UK</strong></p>
+
+                <div class="contact-grid">
+                    <a href="mailto:saimejaz.acca@gmail.com" class="contact-card">
+                        <span class="contact-icon">📧</span>
+                        <div class="contact-title">Email Me</div>
+                        <div class="contact-detail">saimejaz.acca@gmail.com</div>
+                    </a>
+                    
+                    <a href="tel:+447365421804" class="contact-card">
+                        <span class="contact-icon">📞</span>
+                        <div class="contact-title">Call Me</div>
+                        <div class="contact-detail">+44 7365 421804</div>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/saimejaz" target="_blank" class="contact-card">
+                        <span class="contact-icon">💼</span>
+                        <div class="contact-title">LinkedIn</div>
+                        <div class="contact-detail">linkedin.com/in/saimejaz</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Saim Ejaz | ACCA Finalist & Data-Driven Finance Professional</p>
+            <p>Brighton & Hove, United Kingdom</p>
+            <div class="footer-links">
+                <a href="mailto:saimejaz.acca@gmail.com">Email</a>
+                <a href="tel:+447365421804">Phone</a>
+                <a href="https://linkedin.com/in/saimejaz" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
